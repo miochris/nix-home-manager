@@ -145,6 +145,12 @@ in {
   '';
 
   home.file.".vim/autoload/plug.vim" = { source = ./dotfile/plug.vim; };
+  home.file.".aws/config" = {
+    source = ./dotfile/aws_config;
+  };
+  home.file.".aws/credentials" = {
+    source = ./dotfile/aws_credentials;
+  };
 
   programs.direnv.enable = true;
 

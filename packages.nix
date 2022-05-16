@@ -17,6 +17,10 @@ with pkgs;
 
   rofi
 
+  kubectl
+  docker
+  awscli2
+
   # these files are meant to be installed in all scenarios
   bat
   binutils
@@ -42,8 +46,6 @@ with pkgs;
   nix-index
   nix-template
   nix-update
-  nodejs # needed for coc vim plugins
-  openal
   perl # for fzf history
   python3
   ranger
@@ -60,9 +62,6 @@ with pkgs;
   fzf
   ripgrep
   elmPackages.elm-format
-
-  #haskell dependencies
-  haskellPackages.hlint
 
   # so neovim can copy to clipboard
   xclip
