@@ -34,12 +34,13 @@ in {
   # programs.neovim = vimsettings pkgs;
   programs.zsh = {
     enable = true;
+    # shellInit = "source $HOME/.zshrc";
     dotDir = ".config/zsh_nix";
     enableAutosuggestions = true;
     enableSyntaxHighlighting = true;
     oh-my-zsh = {
       enable = true;
-      plugins = [ "git" "vi-mode" "autojump" ];
+      plugins = [ "git" "vi-mode" "autojump" "fzf" ];
       theme = "robbyrussell";
       # theme = "trapd00r";
     };
