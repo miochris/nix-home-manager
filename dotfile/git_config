@@ -1,0 +1,4 @@
+[user]
+    name = "miochris"
+[safe]
+    directory = "/home/qiang/.config/nixos-cfg"
