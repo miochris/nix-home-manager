@@ -93,8 +93,6 @@ in {
 
         startup = [
           #{ command = "exec firefox"; }
-          #{ command = "exec steam"; }
-          #{ command = "exec Discord"; }
         ]
         # ++ lib.optionals isDesktop [
         #   { command = "xrand --output HDMI-0 --right-of DP-4"; notification = false; }
@@ -116,22 +114,20 @@ in {
     };
   };
 
-  home.file.".zshrc".text = ''
-    # test zshrc file
-  '';
+  # home.file.".zshrc".text = ''
+  #   # test zshrc file
+  # '';
 
-  # home.file.".zshrc" = {
-  #   source = ../../git/dotfile/zshrc;
-
-  # };
+  # fzf still not working after sourcing in zshrc
+  home.file.".zshrc" = {
+    source = ./dotfile/zshrc;
+  };
 
   home.file.".config/git/config" = {
     source = ./dotfile/git_config;
   };
   home.file.".vimrc" = { source = ./dotfile/vimrc; };
-  # home.file.".config/i3/config" = {
-  #   source = ../../git/dotfile/i3/config;
-  # };
+
   home.file.".config/i3status/config" = {
     source = ./dotfile/i3status_config;
   };
