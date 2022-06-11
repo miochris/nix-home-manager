@@ -6,6 +6,7 @@ with pkgs;
   unzip
   nixfmt
   tmux
+  tmuxPlugins.resurrect
   zsh
   oh-my-zsh
   autojump
@@ -14,6 +15,9 @@ with pkgs;
   vimPlugins.vim-plug
   google-chrome
   vscode
+
+  acpilight # xbacklight
+  redshift # color temperature
 
   rofi
 
@@ -65,6 +69,11 @@ with pkgs;
 
   # so neovim can copy to clipboard
   xclip
+
+  # apps
+  calibre
+  dropbox-cli
+
 ] ++ pkgs.lib.optionals pkgs.stdenv.isLinux [
   # dotnet
   (with dotnetCorePackages; combinePackages [ sdk_3_1 sdk_5_0 ])

@@ -93,7 +93,8 @@ in {
         # };
 
         startup = [
-          #{ command = "exec firefox"; }
+          { command = "exec --no-startup-id redshift";} # start redshift
+          { command = "exec firefox"; }
         ]
         # ++ lib.optionals isDesktop [
         #   { command = "xrand --output HDMI-0 --right-of DP-4"; notification = false; }
@@ -147,6 +148,13 @@ in {
   };
   home.file.".aws/credentials" = {
     source = ./dotfile/aws_credentials;
+  };
+  home.file.".config/redshift.conf" = {
+    source = ./dotfile/redshift.conf;
+  };
+  # use apple SF fonts
+  xdg.dataFile."fonts/" = {
+    source = ./dotfile/apple_fonts;
   };
 
   programs.direnv.enable = true;

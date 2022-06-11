@@ -73,7 +73,8 @@ Plug 'lervag/vimtex'                   " Latex support
 Plug 'pearofducks/ansible-vim'         " Ansible support
 Plug 'mechatroner/rainbow_csv'         " CSV color coding
 Plug 'ap/vim-css-color'                " CSS colors
-Plug 'luochen1990/rainbow'             " Rainbow parentheses
+" Plug 'luochen1990/rainbow'             " Rainbow parentheses
+Plug 'frazrepo/rainbow'             " Rainbow parentheses
 Plug 'vim-pandoc/vim-pandoc'           " Pandoc support
 Plug 'vim-pandoc/vim-pandoc-syntax'    " Pandoc syntax
 Plug 'chrisbra/colorizer'              " Colorize color codes
@@ -81,10 +82,7 @@ Plug 'vim-python/python-syntax'
 Plug 'sentientmachine/pretty-vim-python'
 
 " Colorschemes
-" Plug 'tomasr/molokai'                  " Monokai and friends
-" Plug 'sickill/vim-monokai'
-" Plug 'patstockwell/vim-monokai-tasty'
-" Plug 'erichdongubler/vim-sublime-monokai'
+Plug 'tomasr/molokai'                  " Monokai and friends
 Plug 'morhetz/gruvbox'
 Plug 'chriskempson/base16-vim'         " Base16 themes
 " Plug 'flazz/vim-colorschemes'          " Bunch of color schemes
@@ -108,15 +106,12 @@ call plug#end()
   " set termguicolors
 " endif
 syntax on           " enable syntax processing
-let g:molokai_original = 1
+" let g:molokai_original = 1
 
 
 " colorscheme molokai " Monokai-like colorscheme
 " let g:vim_monokai_tasty_italic = 1
-" colorscheme vim-monokai-tasty
-" colorscheme monojai
-" colorscheme solarized8_dark
-colorscheme molokai
+colorscheme delek
 " colorscheme gruvbox
 " let islate=$ISLATE
 "         colorscheme sublimemonokai

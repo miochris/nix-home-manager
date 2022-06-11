@@ -31,6 +31,8 @@ mod:
   "${mod}+Shift+m" = "exec amixer -q sset Master toggle";
   "${mod}+Alt+s" = "exec kill $(pgrep -f shutter); shutter -s";
   "XF86AudioRaiseVolume" = "exec amixer -q sset Master 10%+";
+  "XF86MonBrightnessUp" = "exec xbacklight -inc 10"; # not working
+  "XF86MonBrightnessDown" = "exec xbacklight -dec 10"; # not working
   "XF86AudioLowerVolume" = "exec amixer -q sset Master 10%-";
   "XF86AudioMute" = "exec amixer -q sset Master toggle";
   "${mod}+mod1+p" = "exec amixer -q sset Master 10%+";
