@@ -1,13 +1,27 @@
-pkgs: withGUI:
+pkgs: fenix: withGUI:
 with pkgs;
 [
+  # tools for work
+  postgresql
+
+  # basic tools
+  gnome.gnome-screenshot
+  ponymix
+
+  # latex
+  texmaker
+  texlive.combined.scheme-full
+
+
+  sublime
+
   alacritty
   zip
   unzip
   nixfmt
   tmux
   tmuxPlugins.resurrect
-  zsh
+  # zsh
   oh-my-zsh
   autojump
   vim
@@ -30,7 +44,6 @@ with pkgs;
   binutils
   bottom
   cabal-install
-  cargo
   cmake
 
   dbus
@@ -54,7 +67,13 @@ with pkgs;
   python3
   ranger
   rnix-lsp
-  rustc
+  fenix.complete.toolchain
+  gcc
+  pkg-config
+  openssl
+  # cargo
+  # rustc
+  # rustup
   # stack broken
 
   tig

@@ -1,5 +1,7 @@
 mod:
 {
+  # "${mod}+Return" = "split h; exec terminator";
+  # "${mod}+Shift+Return" = "split v; exec terminator";
   "${mod}+Return" = "split h; exec alacritty";
   "${mod}+Shift+Return" = "split v; exec alacritty";
   "${mod}+q" = "kill";

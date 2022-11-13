@@ -21,6 +21,7 @@ pkgs:
 
     # themes
     wombat256
+    sonokai
 
     # language packages
     # Elixir
@@ -71,7 +72,8 @@ pkgs:
   ];
 
   extraConfig = ''
-    colorscheme wombat256mod
+    colorscheme wombat256
+    set background=dark
     syntax on
     filetype plugin indent on
     set splitbelow

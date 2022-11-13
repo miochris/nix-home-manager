@@ -3,6 +3,7 @@
 let
   vimsettings = import ./vim.nix;
   packages = import ./packages.nix;
+  fenix = import (fetchTarball "https://github.com/nix-community/fenix/archive/main.tar.gz") {};
 
   inherit (lib) mkIf;
   inherit (pkgs.stdenv) isLinux isDarwin;
@@ -30,7 +31,7 @@ in {
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
-  home.packages = packages pkgs true;
+  home.packages = packages pkgs fenix true;
   # programs.neovim = vimsettings pkgs;
   programs.zsh = {
     enable = true;
@@ -66,7 +67,7 @@ in {
       ct = "cargo test";
       cr = "cargo run";
       jll = "jl -format=logfmt";
-      deploy_apps = "~/bin/deploy_apps";
+      # deploy_apps = "~/bin/deploy_apps";
     };
   };
   # programs.git = {
@@ -94,7 +95,7 @@ in {
 
         startup = [
           { command = "exec --no-startup-id redshift";} # start redshift
-          { command = "exec firefox"; }
+          # { command = "exec setxkbmap -option ctrl:nocaps"; }
         ]
         # ++ lib.optionals isDesktop [
         #   { command = "xrand --output HDMI-0 --right-of DP-4"; notification = false; }
@@ -141,6 +142,9 @@ in {
     }
     @theme "solarized"
   '';
+  home.file.".config/alacritty.yml" = {
+    source = ./dotfile/alacritty.yml;
+  };
 
   home.file.".vim/autoload/plug.vim" = { source = ./dotfile/plug.vim; };
   home.file.".aws/config" = {
