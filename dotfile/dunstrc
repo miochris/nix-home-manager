@@ -26,7 +26,7 @@
     # Markup is allowed
     format = "<b>%a: %s</b>\n%b\n%p"
 
-    max_icon_size=80
+    max_icon_size=15
 
     # Align icons left/right/off
     icon_position = right
@@ -52,7 +52,7 @@
 
     # show age of message if message is older than show_age_threshold seconds.
     # set to -1 to disable
-    show_age_threshold = 60
+    show_age_threshold = 30
 
     # split notifications into multiple lines if they don't fit into geometry
     word_wrap = yes

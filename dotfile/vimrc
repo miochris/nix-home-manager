@@ -20,6 +20,7 @@ Plug 'junegunn/fzf.vim'
 " Plug 'airblade/vim-rooter'
 
 " Movement
+Plug 'wincent/terminus'               " cursor
 Plug 'justinmk/vim-sneak'
 Plug 'easymotion/vim-easymotion'
 Plug 'haya14busa/incsearch-easymotion.vim'

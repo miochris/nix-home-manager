@@ -38,6 +38,10 @@ in {
     dotDir = ".config/zsh_nix";
     enableAutosuggestions = true;
     enableSyntaxHighlighting = true;
+    # chang cursor shape depending on vi mode
+    initExtra = ''
+      source ${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+    '';
     oh-my-zsh = {
       enable = true;
       plugins = [ "git" "vi-mode" "autojump" "fzf" ];
@@ -121,9 +125,10 @@ in {
   # '';
 
   # fzf still not working after sourcing in zshrc
-  # home.file.".zshrc" = {
-  #   source = ./dotfile/zshrc;
-  # };
+  # for nix-zsh, this is not the default zshrc that defined earlier in this file
+  home.file.".zshrc" = {
+    source = ./dotfile/zshrc;
+  };
 
   home.file.".config/git/config" = {
     source = ./dotfile/git_config;

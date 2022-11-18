@@ -4,6 +4,7 @@ pkgs:
   viAlias = true;
   vimAlias = true;
   plugins = with pkgs.vimPlugins; [
+    terminus
     coc-nvim
     editorconfig-vim
     fzf-vim
