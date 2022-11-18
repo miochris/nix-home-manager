@@ -3,6 +3,7 @@ with pkgs;
 [
   # tools for work
   postgresql
+  postman
 
   # basic tools
   gnome.gnome-screenshot
@@ -32,6 +33,7 @@ with pkgs;
 
   acpilight # xbacklight
   redshift # color temperature
+  dunst # notification
 
   rofi
 
@@ -65,6 +67,7 @@ with pkgs;
   nix-update
   perl # for fzf history
   python3
+  nodejs # for coc.nvim
   ranger
   rnix-lsp
   fenix.complete.toolchain

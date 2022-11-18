@@ -40,9 +40,13 @@ mod:
   "${mod}+mod1+p" = "exec amixer -q sset Master 10%+";
   "${mod}+mod1+o" = "exec amixer -q sset Master 10%-";
   "${mod}+mod1+m" = "exec amixer -q sset Master toggle";
+  # lock
+  "${mod}+mod1+l" = "exec i3lock";
 
   # "${mod}+Shift+grave" = "move scratchpad";
   # "${mod}+grave" = "scratchpad show";
+  "Control+shift+space" = "exec dunstctl close-all";
+  "Control+space" = "exec dunstctl close";
 
   "${mod}+Shift+y" = "resize shrink width 10 px or 10 ppt";
   "${mod}+Shift+u" = "resize shrink height 10 px or 10 ppt";
@@ -55,8 +59,8 @@ mod:
   "${mod}+Shift+space" = "floating toggle";
   "${mod}+a" = "focus parent";
 
-  "Print" = "exec gnome-screenshot";
-  "Shift+Print" = "exec gnome-screenshot -a";
+  "Print" = "exec gnome-screenshot -a";
+  "Shift+Print" = "exec gnome-screenshot";
   "${mod}+Tab" = "workspace back_and_forth";
   "${mod}+comma" = "workspace prev";
   "${mod}+period" = "workspace next";

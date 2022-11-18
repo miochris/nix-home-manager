@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 
 let
-  vimsettings = import ./vim.nix;
+  vimsettings = import ./vim.nix; # not used
   packages = import ./packages.nix;
   fenix = import (fetchTarball "https://github.com/nix-community/fenix/archive/main.tar.gz") {};
 
@@ -35,7 +35,6 @@ in {
   # programs.neovim = vimsettings pkgs;
   programs.zsh = {
     enable = true;
-    # shellInit = "source $HOME/.zshrc";
     dotDir = ".config/zsh_nix";
     enableAutosuggestions = true;
     enableSyntaxHighlighting = true;
@@ -45,6 +44,7 @@ in {
       theme = "robbyrussell";
       # theme = "trapd00r";
     };
+    history.size = 12000;
     shellAliases = {
       ssht = "ssh thorium.corp.hanson.as";
       k = "kubectl";
@@ -67,7 +67,6 @@ in {
       ct = "cargo test";
       cr = "cargo run";
       jll = "jl -format=logfmt";
-      # deploy_apps = "~/bin/deploy_apps";
     };
   };
   # programs.git = {
@@ -122,9 +121,9 @@ in {
   # '';
 
   # fzf still not working after sourcing in zshrc
-  home.file.".zshrc" = {
-    source = ./dotfile/zshrc;
-  };
+  # home.file.".zshrc" = {
+  #   source = ./dotfile/zshrc;
+  # };
 
   home.file.".config/git/config" = {
     source = ./dotfile/git_config;
@@ -144,6 +143,9 @@ in {
   '';
   home.file.".config/alacritty.yml" = {
     source = ./dotfile/alacritty.yml;
+  };
+  home.file.".config/dunst/dunstrc" = {
+    source = ./dotfile/dunstrc;
   };
 
   home.file.".vim/autoload/plug.vim" = { source = ./dotfile/plug.vim; };

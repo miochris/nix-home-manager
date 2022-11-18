@@ -61,6 +61,9 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'ervandew/supertab'
 " Semantic language support
 
+" rust
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 " Syntactic language support
 Plug 'w0rp/ale'                        " Linting engine
 Plug 'plasticboy/vim-markdown'         " Markdown support
