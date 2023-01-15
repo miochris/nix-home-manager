@@ -4,6 +4,7 @@ with pkgs;
   # tools for work
   postgresql
   postman
+  #pritunl-client
 
   # basic tools
   gnome.gnome-screenshot
@@ -15,6 +16,7 @@ with pkgs;
 
 
   sublime
+  clipit
 
   alacritty
   zip

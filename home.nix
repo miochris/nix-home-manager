@@ -39,18 +39,22 @@ in {
     enableAutosuggestions = true;
     enableSyntaxHighlighting = true;
     # chang cursor shape depending on vi mode
-    initExtra = ''
-      source ${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
-    '';
+    # initExtra = ''
+    #   source ${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+    # '';
     oh-my-zsh = {
       enable = true;
       plugins = [ "git" "vi-mode" "autojump" "fzf" ];
       theme = "robbyrussell";
       # theme = "trapd00r";
     };
-    history.size = 12000;
+    # history.size = 12000;
+    # history.expireDuplicateFirst = true;
+    history = {
+      size = 12000;
+      expireDuplicatesFirst = true;
+    };
     shellAliases = {
-      ssht = "ssh thorium.corp.hanson.as";
       k = "kubectl";
       kg = "kubectl get po";
       kd = "kubectl delete pod";
@@ -71,6 +75,7 @@ in {
       ct = "cargo test";
       cr = "cargo run";
       jll = "jl -format=logfmt";
+      chrome = "google-chrome-stable --profile-directory=\"Profile 1\"";
     };
   };
   # programs.git = {
@@ -98,6 +103,8 @@ in {
 
         startup = [
           { command = "exec --no-startup-id redshift";} # start redshift
+          { command = "exec --no-startup-id dropbox start";} # start dropbox
+          { command = "exec --no-startup-id clipit";}
           # { command = "exec setxkbmap -option ctrl:nocaps"; }
         ]
         # ++ lib.optionals isDesktop [
