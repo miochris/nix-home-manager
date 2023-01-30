@@ -100,7 +100,7 @@ with pkgs;
 
 ] ++ pkgs.lib.optionals pkgs.stdenv.isLinux [
   # dotnet
-  (with dotnetCorePackages; combinePackages [ sdk_3_1 sdk_5_0 ])
+  (with dotnetCorePackages; combinePackages [ sdk_7_0 ])
 
   mono
   niv
