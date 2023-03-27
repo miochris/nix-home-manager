@@ -136,10 +136,16 @@ in {
   home.file.".zshrc" = {
     source = ./dotfile/zshrc;
   };
-
-  home.file.".config/git/config" = {
-    source = ./dotfile/git_config;
+  home.file.".tmux.conf" = {
+    source = ./dotfile/tmux/tmux.conf;
   };
+  home.file.".tmux.conf.local" = {
+    source = ./dotfile/tmux/tmux.conf.local;
+  };
+
+  # home.file.".config/git/config" = {
+  #   source = ./dotfile/git_config;
+  # };
   home.file.".vimrc" = { source = ./dotfile/vimrc; };
 
   home.file.".config/i3status/config" = {

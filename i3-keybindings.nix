@@ -64,6 +64,9 @@ mod:
   "${mod}+Tab" = "workspace back_and_forth";
   "${mod}+comma" = "workspace prev";
   "${mod}+period" = "workspace next";
+  "${mod}+Shift+comma" = "move workspace to output left";
+  "${mod}+Shift+period" = "move workspace to output right";
+
 
   "${mod}+1" = "workspace 1";
   # "${mod}+2" = "workspace \"2: web\"";
