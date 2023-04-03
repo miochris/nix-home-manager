@@ -40,6 +40,10 @@ mod:
   "${mod}+mod1+p" = "exec amixer -q sset Master 10%+";
   "${mod}+mod1+o" = "exec amixer -q sset Master 10%-";
   "${mod}+mod1+m" = "exec amixer -q sset Master toggle";
+  # input method switch
+  "${mod}+mod1+i" = "exec ibus-daemon -d";
+  "${mod}+mod1+comma" = "exec ibus engine xkb:us::eng";
+  "${mod}+mod1+period" = "exec ibus engine libpinyin";
   # lock
   "${mod}+mod1+l" = "exec i3lock";
 
