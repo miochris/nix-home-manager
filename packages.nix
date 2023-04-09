@@ -31,7 +31,13 @@ with pkgs;
   neovim
   vimPlugins.vim-plug
   google-chrome
-  vscode
+  # code is in home.nix using code.fhs for cpptools
+  # vscode
+  # (vscode-with-extensions.override {
+  #     vscodeExtensions = with vscode-extensions; [
+  #       ms-vscode.cpptools
+  #     ];
+  #   })
 
   acpilight # xbacklight
   redshift # color temperature

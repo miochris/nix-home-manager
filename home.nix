@@ -32,6 +32,14 @@ in {
   programs.home-manager.enable = true;
 
   home.packages = packages pkgs fenix true;
+
+  # to use cpptools, which has pre-compiled binaries
+  programs.vscode = {
+    enable = true;
+    package = pkgs.vscode.fhs;
+  };
+
+
   # programs.neovim = vimsettings pkgs;
   programs.zsh = {
     enable = true;
@@ -76,6 +84,9 @@ in {
       cr = "cargo run";
       jll = "jl -format=logfmt";
       chrome = "google-chrome-stable --profile-directory=\"Profile 1\"";
+      brave = "brave --profile-directory=\"Profile 1\"";
+      bravew = "brave --profile-directory=\"Profile 1\"";
+      bravep = "brave --profile-directory=\"Profile 2\"";
     };
   };
   # programs.git = {
