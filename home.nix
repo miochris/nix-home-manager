@@ -33,10 +33,14 @@ in {
 
   home.packages = packages pkgs fenix true;
 
-  # to use cpptools, which has pre-compiled binaries
   programs.vscode = {
     enable = true;
-    package = pkgs.vscode.fhs;
+    package = pkgs.vscode;
+    # to use cpptools, which has pre-compiled binaries
+    # it breaks rust-analyzer
+    # alternatively close all vscode and open the fhs one from shell
+    # ussing: nix-shell -p vscode-fhs
+    # package = pkgs.vscode.fhs;
   };
 
 
