@@ -72,6 +72,7 @@ in {
       kd = "kubectl delete pod";
       kdp = "kubectl describe pod";
       kl = "kubectl logs -f";
+      kll = "kubectl logs -f -l=";
       kdev = "kubectl config use-context smk-dev";
       kmn = "kubectl config use-context minikube";
       kstg =
