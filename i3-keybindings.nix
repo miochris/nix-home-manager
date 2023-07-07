@@ -41,7 +41,8 @@ mod:
   "${mod}+mod1+o" = "exec amixer -q sset Master 10%-";
   "${mod}+mod1+m" = "exec amixer -q sset Master toggle";
   # input method switch
-  "${mod}+mod1+i" = "exec ibus-daemon -d && ibus engine $(ibus engine | grep -q \"xkb:us::eng\" && echo \"libpinyin\" || echo \"xkb:us::eng\") ";
+  "${mod}+Control+i" = "exec ibus-daemon -d && ibus engine $(ibus engine | grep -q \"xkb:us::eng\" && echo \"libpinyin\" || echo \"xkb:us::eng\") ";
+  # "${mod}+mod1+i" = "exec ibus-daemon -d && ibus engine $(ibus engine | grep -q \"xkb:us::eng\" && echo \"libpinyin\" || echo \"xkb:us::eng\") ";
   # lock
   "${mod}+mod1+l" = "exec i3lock";
 
