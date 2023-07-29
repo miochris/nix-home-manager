@@ -31,6 +31,7 @@ with pkgs;
   neovim
   vimPlugins.vim-plug
   google-chrome
+  brave
   # code is in home.nix using code.fhs for cpptools
   # vscode
   # (vscode-with-extensions.override {
