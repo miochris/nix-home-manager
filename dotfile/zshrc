@@ -10,5 +10,7 @@
 # RPROMPT="[%*]"
 PROMPT='%{$fg[yellow]%}[%D{%H:%M} nix]'$PROMPT
 
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
 
 alias ee="echo aa"

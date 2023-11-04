@@ -1,6 +1,7 @@
 pkgs: fenix: withGUI:
 with pkgs;
 [
+  eza
   # tools for work
   postgresql
   postman
@@ -59,7 +60,6 @@ with pkgs;
 
   dbus
   direnv
-  exa
   fd
   git
   gitAndTools.hub

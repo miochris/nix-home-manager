@@ -305,3 +305,6 @@ set -g status-position top
 
 bind-key & kill-window
 bind-key x kill-pane
+
+# tmux plugin
+# run-shell ${tmuxPlugins.resurrect}
