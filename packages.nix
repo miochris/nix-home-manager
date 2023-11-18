@@ -4,7 +4,7 @@ with pkgs;
   eza
   # tools for work
   postgresql
-  postman
+  # postman
   #pritunl-client
 
   # basic tools

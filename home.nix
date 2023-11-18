@@ -112,12 +112,12 @@ in {
       config = {
         modifier = "Mod4";
         # bars = [ ];
-        # gaps = {
-        #   inner = 12;
-        #   outer = 5;
-        #   smartGaps = true;
-        #   smartBorders = "off";
-        # };
+        gaps = {
+          inner = 12;
+          outer = 5;
+          smartGaps = true;
+          smartBorders = "off";
+        };
 
         startup = [
           { command = "exec --no-startup-id redshift";} # start redshift
@@ -135,13 +135,10 @@ in {
 
         keybindings = import ./i3-keybindings.nix config.modifier;
       };
-      # extraConfig = ''
-      #   for_window [class="^.*"] border pixel 2
-      #   #exec systemctl --user import-environment
-      # '' + lib.optionalString isDesktop ''
-      #   workspace "2: web" output HDMI-0
-      #   workspace "7" output HDMI-0
-      # '';
+      extraConfig = ''
+          floating_minimum_size 75 x 50
+          floating_maximum_size -1 x -1
+      '';
     };
   };
 
