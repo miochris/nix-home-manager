@@ -31,7 +31,7 @@ with pkgs;
   vim
   neovim
   vimPlugins.vim-plug
-  google-chrome
+  # google-chrome
   brave
   # code is in home.nix using code.fhs for cpptools
   # vscode
@@ -49,7 +49,7 @@ with pkgs;
 
   kubectl
   docker
-  awscli2
+  # awscli2
 
   # these files are meant to be installed in all scenarios
   bat
@@ -75,11 +75,13 @@ with pkgs;
   nix-template
   nix-update
   perl # for fzf history
-  python3
+  python3Full
   nodejs # for coc.nvim
   ranger
   rnix-lsp
-  fenix.complete.toolchain
+  # rust
+  # fenix.complete.toolchain # nightly
+  fenix.stable.toolchain
   gcc
   pkg-config
   openssl

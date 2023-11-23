@@ -58,7 +58,7 @@ in {
     # '';
     oh-my-zsh = {
       enable = true;
-      plugins = [ "git" "vi-mode" "autojump" "fzf" ];
+      plugins = [ "git" "vi-mode" "autojump" "fzf" "kubectl" "direnv" "docker" "copyfile" ];
       theme = "robbyrussell";
       # theme = "trapd00r";
     };
