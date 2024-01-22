@@ -112,12 +112,12 @@ in {
       config = {
         modifier = "Mod4";
         # bars = [ ];
-        gaps = {
-          inner = 12;
-          outer = 5;
-          smartGaps = true;
-          smartBorders = "off";
-        };
+        # gaps = {
+        #   inner = 12;
+        #   outer = 5;
+        #   smartGaps = true;
+        #   smartBorders = "off";
+        # };
 
         startup = [
           { command = "exec --no-startup-id redshift";} # start redshift
@@ -174,8 +174,8 @@ in {
     }
     @theme "solarized"
   '';
-  home.file.".config/alacritty.yml" = {
-    source = ./dotfile/alacritty.yml;
+  home.file.".config/alacritty.toml" = {
+    source = ./dotfile/alacritty.toml;
   };
   home.file.".config/dunst/dunstrc" = {
     source = ./dotfile/dunstrc;

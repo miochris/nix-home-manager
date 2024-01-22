@@ -76,6 +76,7 @@ with pkgs;
   nix-update
   perl # for fzf history
   python3Full
+  go
   nodejs # for coc.nvim
   ranger
   rnix-lsp
