@@ -1,6 +1,22 @@
 pkgs: fenix: withGUI:
 with pkgs;
 [
+  # moved from nix-env
+  awscli2
+  bolt
+  chromium
+  cloc
+  dolphin
+  insomnia
+  # libinput
+  libreoffice
+  ncdu
+  nixpkgs-fmt
+  perl
+  openvpn
+  tldr
+  xsel
+
   eza
   # tools for work
   postgresql
@@ -45,7 +61,8 @@ with pkgs;
   redshift # color temperature
   dunst # notification
 
-  rofi
+  # rofi
+  alsa-utils
 
   kubectl
   docker

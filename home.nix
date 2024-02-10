@@ -112,12 +112,12 @@ in {
       config = {
         modifier = "Mod4";
         # bars = [ ];
-        # gaps = {
-        #   inner = 12;
-        #   outer = 5;
-        #   smartGaps = true;
-        #   smartBorders = "off";
-        # };
+        gaps = {
+          inner = 12;
+          outer = 5;
+          smartGaps = true;
+          smartBorders = "off";
+        };
 
         startup = [
           { command = "exec --no-startup-id redshift";} # start redshift
@@ -125,9 +125,6 @@ in {
           { command = "exec --no-startup-id clipit";}
           # { command = "exec setxkbmap -option ctrl:nocaps"; }
         ]
-        # ++ lib.optionals isDesktop [
-        #   { command = "xrand --output HDMI-0 --right-of DP-4"; notification = false; }
-        # ]
         ;
         assigns = {
           # "1: web" = [{ class = "^Firefox$"; }];
@@ -142,9 +139,6 @@ in {
     };
   };
 
-  # home.file.".zshrc".text = ''
-  #   # test zshrc file
-  # '';
 
   # fzf still not working after sourcing in zshrc
   # for nix-zsh, this is not the default zshrc that defined earlier in this file
@@ -173,6 +167,10 @@ in {
      combi-modi: "window,drun,ssh";
     }
     @theme "solarized"
+  '';
+  # dpi settings for sway
+  home.file.".Xresources".text = ''
+    Xft.dpi: 135
   '';
   home.file.".config/alacritty.toml" = {
     source = ./dotfile/alacritty.toml;
