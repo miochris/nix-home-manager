@@ -172,6 +172,9 @@ in {
   home.file.".Xresources".text = ''
     Xft.dpi: 135
   '';
+  home.file.".config/sway/config" = {
+    source = ./dotfile/sway_config;
+  };
   home.file.".config/alacritty.toml" = {
     source = ./dotfile/alacritty.toml;
   };
