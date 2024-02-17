@@ -16,6 +16,8 @@ with pkgs;
   openvpn
   tldr
   xsel
+  # sway
+  kanshi
 
   eza
   # tools for work
@@ -59,7 +61,6 @@ with pkgs;
 
   acpilight # xbacklight
   redshift # color temperature
-  dunst # notification
 
   # rofi
   alsa-utils

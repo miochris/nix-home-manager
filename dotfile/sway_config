@@ -86,8 +86,8 @@ bindsym Shift+Print exec gnome-screenshot
 bindsym XF86AudioLowerVolume exec amixer -q sset Master 10%-
 bindsym XF86AudioMute exec amixer -q sset Master toggle
 bindsym XF86AudioRaiseVolume exec amixer -q sset Master 10%+
-bindsym XF86MonBrightnessDown exec xbacklight -dec 10
-bindsym XF86MonBrightnessUp exec xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
+bindsym XF86MonBrightnessUp exec brightnessctl set +10%
 
 mode "resize" {
   bindsym Down resize grow height 10 px or 10 ppt
@@ -135,9 +135,27 @@ input type:touchpad {
     tap enabled
     natural_scroll enabled
 }
+# swap laptop ctrl and caps
+#input "type:keyboard" {
+input "1:1:AT_Translated_Set_2_keyboard" {
+    xkb_options ctrl:swapcaps
+    xkb_layout gb
+}
 
 # hidpi
 exec xrdb -load ~/.Xresources
+
+# # Toggle control center
+# bindsym Mod4+Shift+n exec swaync-client -t -sw
+#
+# # Kill any running notification daemon
+# exec_always --no-startup-id killall -q mako || true
+# exec_always --no-startup-id killall -q dunst || true
+#
+# # Start SwayNotificationCenter
+# exec_always --no-startup-id swaync
+exec_always --no-startup-id dunst
+exec_always --no-startup-id kanshi
 
 exec  exec --no-startup-id redshift
 exec  exec --no-startup-id dropbox start

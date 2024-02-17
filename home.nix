@@ -32,6 +32,89 @@ in {
   programs.home-manager.enable = true;
 
   home.packages = packages pkgs fenix true;
+  services.swayidle = {
+    enable = true;
+    systemdTarget = "";
+    timeouts = [
+          { timeout = 6; command = "${pkgs.swaylock}/bin/swaylock -fF"; }
+          { timeout = 9; command = "${pkgs.systemd}/bin/systemctl suspend"; }
+        ];
+    events = [
+    { event = "lock"; command = "lock"; }
+    { event = "before-sleep"; command = "${pkgs.swaylock}/bin/swaylock -fF"; }
+
+     ];
+
+  };
+  services.kanshi = {
+    enable = true;
+    # systemdTarget = "hyprland-session.target";
+    systemdTarget = "";
+    profiles = {
+      home2 = {
+        outputs = [
+          {
+            criteria = "eDP-1";
+            status = "disable";
+          }
+          {
+            criteria = "DP-7";
+            status = "enable";
+            position = "0,0";
+          }
+          {
+            criteria = "DP-8";
+            status = "enable";
+            position = "2560,0";
+          }
+        ];
+      };
+      home3 = {
+        outputs = [
+          {
+            criteria = "eDP-1";
+            status = "enable";
+            position = "0,0";
+          }
+          {
+            criteria = "DP-7";
+            status = "enable";
+            position = "1920,0";
+          }
+          {
+            criteria = "DP-8";
+            status = "enable";
+            position = "4480,0";
+          }
+        ];
+      };
+      office3r = {
+        outputs = [
+          {
+            criteria = "eDP-1";
+            status = "disable";
+            position = "0,0";
+          }
+          {
+            criteria = "DP-5";
+            status = "enable";
+            position = "1440,615";
+          }
+          {
+            criteria = "DP-6";
+            status = "enable";
+            position = "4000,615";
+          }
+          {
+            criteria = "DP-7";
+            status = "enable";
+            position = "0,0";
+            transform = "90";
+          }
+        ];
+      };
+    };
+  };
 
   programs.vscode = {
     enable = true;
