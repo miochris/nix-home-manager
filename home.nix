@@ -175,8 +175,8 @@ in {
       jll = "jl -format=logfmt";
       chrome = "google-chrome-stable --profile-directory=\"Profile 1\"";
       brave = "brave --profile-directory=\"Profile 1\"";
-      bravew = "brave --profile-directory=\"Profile 1\"";
-      bravep = "brave --profile-directory=\"Profile 2\"";
+      vpnon = "~/vpnon.sh";
+      vpnoff = "~/vpnoff.sh";
     };
   };
   # programs.git = {
@@ -253,7 +253,7 @@ in {
   '';
   # dpi settings for sway
   home.file.".Xresources".text = ''
-    Xft.dpi: 135
+    Xft.dpi: 145
   '';
   home.file.".config/sway/config" = {
     source = ./dotfile/sway_config;

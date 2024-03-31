@@ -88,6 +88,8 @@ bindsym XF86AudioMute exec amixer -q sset Master toggle
 bindsym XF86AudioRaiseVolume exec amixer -q sset Master 10%+
 bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
 bindsym XF86MonBrightnessUp exec brightnessctl set +10%
+bindsym Mod4+o exec bravew
+bindsym Mod4+p exec bravep
 
 mode "resize" {
   bindsym Down resize grow height 10 px or 10 ppt

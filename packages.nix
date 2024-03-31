@@ -22,7 +22,7 @@ with pkgs;
   eza
   # tools for work
   postgresql
-  # postman
+  postman
   #pritunl-client
 
   # basic tools
@@ -97,7 +97,7 @@ with pkgs;
   go
   nodejs # for coc.nvim
   ranger
-  rnix-lsp
+  # rnix-lsp
   # rust
   # fenix.complete.toolchain # nightly
   fenix.stable.toolchain
