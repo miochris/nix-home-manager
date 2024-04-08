@@ -131,10 +131,8 @@ in {
   programs.zsh = {
     enable = true;
     dotDir = ".config/zsh_nix";
-    enableAutosuggestions = true;
-    syntaxHighlighting = {
-      enable = true;
-    };
+    autosuggestion.enable = true;
+    syntaxHighlighting.enable = true;
     # chang cursor shape depending on vi mode
     # initExtra = ''
     #   source ${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
