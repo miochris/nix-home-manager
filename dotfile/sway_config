@@ -1,3 +1,7 @@
+exec dbus-update-activation-environment DISPLAY I3SOCK SWAYSOCK WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+exec pipewire &
+exec pipewire-pulse &
+exec wireplumber &
 font pango:monospace 8.000000
 floating_modifier Mod4
 default_border normal 2

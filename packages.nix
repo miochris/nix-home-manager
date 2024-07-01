@@ -123,8 +123,12 @@ with pkgs;
   xclip
 
   # apps
-  calibre
+  # calibre # can't build on 2024.04.20
   dropbox-cli
+  # sway window sharing
+  pipewire
+  wireplumber
+  xdg-desktop-portal-wlr
 
 ] ++ pkgs.lib.optionals pkgs.stdenv.isLinux [
   # dotnet

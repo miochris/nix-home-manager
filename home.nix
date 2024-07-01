@@ -58,12 +58,12 @@ in {
             status = "disable";
           }
           {
-            criteria = "DP-7";
+            criteria = "DP-3";
             status = "enable";
             position = "0,0";
           }
           {
-            criteria = "DP-8";
+            criteria = "DP-9";
             status = "enable";
             position = "2560,0";
           }
@@ -107,6 +107,31 @@ in {
           }
           {
             criteria = "DP-7";
+            status = "enable";
+            position = "0,0";
+            transform = "90";
+          }
+        ];
+      };
+      office3rn = {
+        outputs = [
+          {
+            criteria = "eDP-1";
+            status = "disable";
+            position = "0,0";
+          }
+          {
+            criteria = "DP-6";
+            status = "enable";
+            position = "1440,615";
+          }
+          {
+            criteria = "DP-7";
+            status = "enable";
+            position = "4000,615";
+          }
+          {
+            criteria = "DP-8";
             status = "enable";
             position = "0,0";
             transform = "90";
@@ -251,7 +276,7 @@ in {
   '';
   # dpi settings for sway
   home.file.".Xresources".text = ''
-    Xft.dpi: 145
+    Xft.dpi: 135
   '';
   home.file.".config/sway/config" = {
     source = ./dotfile/sway_config;
