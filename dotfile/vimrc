@@ -191,6 +191,9 @@ nnoremap <C-h> :nohlsearch<cr>
 " Undo
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set undofile " Maintain undo history between sessions
+if !isdirectory($HOME . "/.vim/undodir")
+    call mkdir($HOME . "/.vim/undodir", "p", 0700)
+endif
 set undodir=~/.vim/undodir
 
 

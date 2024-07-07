@@ -111,7 +111,9 @@ bar {
   mode dock
   hidden_state hide
   position bottom
-  status_command /nix/store/6fw0a0qdz2dds1qd5169p49qm5imqy5s-i3status-2.14/bin/i3status
+  # status_command /nix/store/6fw0a0qdz2dds1qd5169p49qm5imqy5s-i3status-2.14/bin/i3status
+  # status_command /run/current-system/sw/bin/i3status
+  status_command /nix/store/vlkmz6r0566z71rgw127y6gzj1rp2iai-i3status-2.14/bin/i3status
   # i3bar_command /nix/store/aqar21yw4214fawfxnhhazwc9drmlvp5-i3-4.23/bin/i3bar
   workspace_buttons yes
   strip_workspace_numbers no
