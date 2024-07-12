@@ -8,9 +8,7 @@ enable-normalization-flatten-containers = false
 enable-normalization-opposite-orientation-for-nested-containers = false
 
 [mode.main.binding]
-# alt-enter = ['exec-and-forget open -na ~/.nix-profile/Applications/iTerm2.app --args -n']
 alt-enter = ['exec-and-forget open -na ~/.nix-profile/bin/alacritty']
-# alt-shift-enter = ['split vertical', 'exec-and-forget open -na ~/.nix-profile/Applications/iTerm2.app --args -n', 'split horizontal']
 alt-z = ['exec-and-forget open -na "Google Chrome"']
 
 alt-j = 'focus left'
