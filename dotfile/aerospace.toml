@@ -7,6 +7,23 @@
 enable-normalization-flatten-containers = false
 enable-normalization-opposite-orientation-for-nested-containers = false
 
+
+# Run Sketchybar together with AeroSpace
+# sketchbar has a built-in detection of already running process,
+# so it won't be run twice on AeroSpace restart
+# after-startup-command = ['exec-and-forget sketchybar']
+after-startup-command = [
+    # JankyBorders has a built-in detection of already running process,
+    # so it won't be run twice on AeroSpace restart
+    'exec-and-forget /opt/homebrew/opt/sketchybar/bin/sketchybar',
+    'exec-and-forget /opt/homebrew/opt/borders/bin/borders active_color="glow(0xc0ffb3ba)" inactive_color=0x20494d64 width=8.0'
+]
+start-at-login = true
+# Notify Sketchybar about workspace change
+exec-on-workspace-change = ['/bin/bash', '-c',
+    'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE'
+]
+
 [mode.main.binding]
 alt-enter = ['exec-and-forget open -na ~/.nix-profile/bin/alacritty']
 alt-z = ['exec-and-forget open -na "Google Chrome"']
@@ -15,15 +32,18 @@ alt-j = 'focus left'
 alt-k = 'focus right'
 alt-i = 'focus up'
 alt-m = 'focus down'
-alt-shift-up = 'focus-monitor up'
-alt-shift-down = 'focus-monitor down'
-alt-shift-left = 'focus-monitor left'
-alt-shift-right = 'focus-monitor right'
+alt-up = 'focus-monitor up'
+alt-down = 'focus-monitor down'
+alt-left = 'focus-monitor left'
+alt-right = 'focus-monitor right'
 
 alt-shift-j = 'move left'
 alt-shift-k = 'move down'
 alt-shift-l = 'move up'
 alt-shift-semicolon = 'move right'
+
+alt-shift-comma = 'move-workspace-to-monitor prev'
+alt-shift-period = 'move-workspace-to-monitor next'
 
 # Consider using 'join-with' command as a 'split' replacement if you want to enable normalizations
 alt-h = 'split horizontal'
@@ -80,3 +100,8 @@ k = 'resize height -50'
 l = 'resize width +50'
 enter = 'mode main'
 esc = 'mode main'
+
+[gaps]
+inner.horizontal = 5
+inner.vertical = 5
+outer.top = 30
