@@ -15,8 +15,9 @@ enable-normalization-opposite-orientation-for-nested-containers = false
 after-startup-command = [
     # JankyBorders has a built-in detection of already running process,
     # so it won't be run twice on AeroSpace restart
+    'exec-and-forget autoraise',
     'exec-and-forget /opt/homebrew/opt/sketchybar/bin/sketchybar',
-    'exec-and-forget /opt/homebrew/opt/borders/bin/borders active_color="glow(0xc0ffb3ba)" inactive_color=0x20494d64 width=8.0'
+    'exec-and-forget /opt/homebrew/opt/borders/bin/borders active_color="glow(0xc0ffb3ba)" inactive_color=0x20494d64 width=8.0',
 ]
 start-at-login = true
 # Notify Sketchybar about workspace change
@@ -32,10 +33,10 @@ alt-j = 'focus left'
 alt-k = 'focus right'
 alt-i = 'focus up'
 alt-m = 'focus down'
-alt-up = 'focus-monitor up'
-alt-down = 'focus-monitor down'
-alt-left = 'focus-monitor left'
-alt-right = 'focus-monitor right'
+alt-shift-up = 'focus-monitor up'
+alt-shift-down = 'focus-monitor down'
+alt-shift-left = 'focus-monitor left'
+alt-shift-right = 'focus-monitor right'
 
 alt-shift-j = 'move left'
 alt-shift-k = 'move down'
